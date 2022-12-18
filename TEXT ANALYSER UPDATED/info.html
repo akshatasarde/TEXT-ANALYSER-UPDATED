@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Info</title>
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h4 class="h4" id="h4">Analyse your text below!</h4>
+    <div class="info-wrapper"></div>
+
+
+    <h4 class="info-h4" id="h4">Found this incorrect? Insert your query below!</h4>
+
+    <section id="contact-me">
+      <form name="contact" id="contact" action="post" onsubmit="sendEmail(); reset(); return false;">
+          <section>
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" id="firstName" required>
+          </section>
+          <section>
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" required>
+          </section>
+          <section>
+              <label for="message">Message</label>
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          </section>
+          <button type="submit">Send</button>
+      </form>
+  </section>
+
+  <div class="intro">
+    <h6 id="h6">A mini project by &copy;Akshata Sarde</h6>
+    <a href="https://www.linkedin.com" target="_blank">
+      <img width="30" src="https://i.pinimg.com/originals/ce/09/3c/ce093c7214ad357bb665cfd2f66a8b6b.png" alt="">
+  </a>
+  <a href="https://www.instagram.com" target="_blank">
+      <img width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="">
+  </a>
+  <a href="https://twitter.com/" target="_blank">
+      <img width="30" src="https://bankimooncentre.org/wp-content/uploads/2020/05/twitter-icon-square-logo-108D17D373-seeklogo.com_.png" alt="">
+  </a>
+  </div>
+
+    <script src="js/textInfo.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      function sendEmail() {
+        Email.send({
+              Host : "smtp.gmail.com",
+              Username : "akshatas174btechcse2023@kccitm.edu.in",
+              Password : "password",
+              To : 'chikkysarde@gmail.com',
+              From : "akshatas174btechcse2023@kccitm.edu.in",
+              Subject : "New Query (Text Analyser)",
+              Body : "First Name: " + document.getElementById("firstName").value
+              + "<br> Last Name: " + document.getElementById("lastName").value
+              + "<br> Message: " + document.getElementById("message").value
+          }).then(
+            message => alert("message send successfully")
+          );
+      }
+    </script>
+
+    <script>
+      window.onload = () => {
+        showData();
+      };
+    </script>
+  </body>
+</html>
+
+<!-- 
+  <div class="box">
+        <h2>100</h2>
+        <p>new lines</p>
+      </div>
+      <div class="box">
+        <h2>200</h2>
+        <p>words</p>
+      </div>
+      <div class="box">
+        <h2>300</h2>
+        <p>uppercaes</p>
+      </div>
+      <div class="box">
+        <h2>400</h2>
+        <p>lowercase</p>
+      </div>
+      <div class="box">
+        <h2>500</h2>
+        <p>spaces</p>
+      </div>
+      <div class="box">
+        <h2>600</h2>
+        <p>digits</p>
+      </div>
+      <div class="box">
+        <h2>700</h2>
+        <p>vowels</p>
+      </div>
+      <div class="box">
+        <h2>80</h2>
+        <p>consonants</p>
+      </div> -->

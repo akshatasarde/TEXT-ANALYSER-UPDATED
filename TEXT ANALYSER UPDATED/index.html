@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Analyser</title>
+
+    <!-- roboto font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="banner">
+        <h1 id="dynamic-text"></h1>
+      </div>
+    </div>
+
+    <div class="text-wrapper">
+      <h4 id="h4">This is your Text Analyser, put your text in and generate info about your text!</h4>
+      <textarea id="text" spellcheck="false"></textarea>
+      <button onclick="setText()">Generate Info</button>
+    </div>
+
+    <div class="intro">
+      <h6 id="h6">A mini project by &copy;Akshata Sarde</h6>
+      <a href="https://www.linkedin.com" target="_blank">
+        <img width="30" src="https://i.pinimg.com/originals/ce/09/3c/ce093c7214ad357bb665cfd2f66a8b6b.png" alt="">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+        <img width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="">
+    </a>
+    <a href="https://twitter.com/" target="_blank">
+        <img width="30" src="https://bankimooncentre.org/wp-content/uploads/2020/05/twitter-icon-square-logo-108D17D373-seeklogo.com_.png" alt="">
+    </a>
+    </div>
+
+    <!-- textInfo.js -->
+    <script src="js/textInfo.js"></script>
+    
+    <!-- dynamic-text.js -->
+    <script src="./js/dynamic-text.js"></script>
+  </body>
+</html>
